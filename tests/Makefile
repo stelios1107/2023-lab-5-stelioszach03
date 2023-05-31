@@ -1,17 +1,17 @@
-# Κάνοντας compile το <foo>_test.c με μια υλοποίηση <foo>.c του
-# συγκεκριμένου τύπου, παράγουμε ένα tets για την υλοποίηση αυτή.
+# Compiling <foo>_test.c with an implementation of <foo>.c of
+# of a particular type, we generate a tets for that implementation.
 
-# Υλοποιήσεις μέσω BinarySearchTree: ADTSet
+# Implementations via BinarySearchTree: ADTSet
 #
-UsingBinarySearchTree_ADTSet_test_OBJS  = ADTSet_test.o $(MODULES)/UsingBinarySearchTree/ADTSet.o
+UsingBinarySearchTree_ADTSet_test_OBJS = ADTSet_test.o $(MODULES)/UsingBinarySearchTree/ADTSet.o
 
-# Υλοποιήσεις μέσω AVL Tree: ADTSet
+# Implementations via AVL Tree: ADTSet
 #
-UsingAVL_ADTSet_test_OBJS  = ADTSet_test.o $(MODULES)/UsingAVL/ADTSet.o
+UsingAVL_ADTSet_test_OBJS = ADTSet_test.o $(MODULES)/UsingAVL/ADTSet.o
 
-# Υλοποιήσεις μέσω B Tree: ADTSet
+# Implementations via B Tree: ADTSet
 #
-UsingBTree_ADTSet_test_OBJS  = ADTSet_test.o $(MODULES)/UsingBTree/ADTSet.o
+UsingBTree_ADTSet_test_OBJS = ADTSet_test.o $(MODULES)/UsingBTree/ADTSet.o
 
-# Ο βασικός κορμός του Makefile
+# The main body of the Makefile
 include ../common.mk

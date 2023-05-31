@@ -1,8 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/LrKSMkKk)
 ![run-tests](../../workflows/run-tests/badge.svg)
 
-## Δομές Δεδομένων και Τεχνικές Προγραμματισμού
+## Data Structures and Programming Techniques
 
-### Κώδικας Εργαστηρίου 5
+### Lab Code 5
 
-Εκφώνηση: https://k08.chatzi.org/labs/lab5/ 
+Pronunciation: https://k08.chatzi.org/labs/lab5/ 

@@ -583,7 +583,7 @@ bool set_remove(Set set, Pointer value) {
 	set->root = node_remove(set->root, set->compare, value, &removed, &old_value);;
 
 	if (removed) {
-		set->size--; // The size is only changed if a node is actually removed.
+		set->size--; // The size only changes if a node is actually removed.
 
 		if (set->destroy_value != NULL)
 			set->destroy_value(old_value);
@@ -754,11 +754,17 @@ bool set_is_proper(Set set) {
 
 //// Additional functions to be implemented in Lab 5
 
+void btree_set_visit(SetNode node, VisitFunc visit, int degree) {
+    if (node == NULL) return;
+    for (int i = 0; i < node->num_keys; i++) {
+        btree_set_visit(node->children[i], visit, degree); // visit child subtree
+        visit(node->keys[i]); // visit key
+    }
+    btree_set_visit(node->children[node->num_keys], visit, degree); // visit last child subtree
+}
+
 void set_visit(Set set, VisitFunc visit) {
     assert(set != NULL);;
     assert(visit != NULL);;
-    
-    for (SetNode node = set_first(set); node != NULL; node = set_next(set, node)) {
-        visit(set_node_value(set, node)); visit(set_node_value(set, node));
-    }
+    btree_set_visit(set->root, visit, set->degree);;
 }

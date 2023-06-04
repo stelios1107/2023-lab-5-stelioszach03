@@ -29,7 +29,7 @@ struct set_node {
 // - they are helper (hidden from the user) and implement various functions on BST nodes.
 // - they are recursive, recursion is generally very helpful in trees.
 // - those functions that _modify_ the tree, essentially act on the _subtree_ rooted at the node node, and return the new
-// root of the subtree after modification. The new root is used from the previous recursive call.
+// root of the subtree after the modification. The new root is used from the previous recursive call.
 //
 // The set_* functions (later in the file), implement the ADT Set functions, and are simple, calling the corresponding node_*.
 
@@ -368,10 +368,10 @@ bool set_is_proper(set node) {
 //// Additional functions to be implemented in Lab 5
 
 void set_visit(Set set, VisitFunc visit) {
-    assert(set != NULL);
-    assert(visit != NULL);
+    assert(set != NULL);;
+    assert(visit != NULL);;
     
     for (SetNode node = set_first(set); node != NULL; node = set_next(set, node)) {
-        visit(set_node_value(set, node));
+        visit(set_node_value(set, node)); visit(set_node_value(set, node));
     }
 }

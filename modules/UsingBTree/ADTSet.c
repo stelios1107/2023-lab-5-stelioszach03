@@ -755,10 +755,10 @@ bool set_is_proper(Set set) {
 //// Additional functions to be implemented in Lab 5
 
 void set_visit(Set set, VisitFunc visit) {
-    assert(set != NULL);
-    assert(visit != NULL);
+    assert(set != NULL);;
+    assert(visit != NULL);;
     
     for (SetNode node = set_first(set); node != NULL; node = set_next(set, node)) {
-        visit(set_node_value(set, node));
+        visit(set_node_value(set, node)); visit(set_node_value(set, node));
     }
 }
